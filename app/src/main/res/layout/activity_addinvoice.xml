@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddinvoiceActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="1000dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Customer Details:"
+            android:textColor="#2980B9"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Item Description:"
+            android:textColor="#2980B9"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtcompanyname" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="Payment Details:"
+            android:textColor="#2980B9"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txttaxamount" />
+
+        <EditText
+            android:id="@+id/txtcustomername"
+            android:layout_width="326dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Customer name*"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/txtitemname"
+            android:layout_width="326dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="39dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Item Name"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <EditText
+            android:id="@+id/txtdescription"
+            android:layout_width="326dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="24dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Description"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtitemname" />
+
+        <EditText
+            android:id="@+id/txttotalamount"
+            android:layout_width="326dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="36dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Total Amount"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/txtremark"
+            android:layout_width="320dp"
+            android:layout_height="117dp"
+            android:layout_marginTop="28dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="Remark"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtdiscount" />
+        //.ui.gallery.GalleryFragment
+        <EditText
+            android:id="@+id/txtpaymentdate"
+            android:layout_width="326dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="52dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Payment date(YYYY/MM/DD)"
+            android:inputType="date"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txttotalamount" />
+
+        <EditText
+            android:id="@+id/txttaxamount"
+            android:layout_width="141dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Tax Amount"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/txttotal"
+            app:layout_constraintHorizontal_bias="0.363"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtprice" />
+
+        <EditText
+            android:id="@+id/txtprice"
+            android:layout_width="141dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="16dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Price"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtdescription" />
+
+        <EditText
+            android:id="@+id/txtdiscount"
+            android:layout_width="141dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="68dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Discount"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/txtamountpaid"
+            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtpaymentdate" />
+
+        <EditText
+            android:id="@+id/txtamountpaid"
+            android:layout_width="141dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="40dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Amount Paid"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtpaymentdate" />
+
+        <EditText
+            android:id="@+id/txttotal"
+            android:layout_width="171dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="48dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Total"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtqty" />
+
+        <EditText
+            android:id="@+id/txtqty"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="QTY"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/txtsubtotal"
+            app:layout_constraintTop_toBottomOf="@+id/txtdescription" />
+
+        <EditText
+            android:id="@+id/txtsubtotal"
+            android:layout_width="86dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Subtotal"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtdescription" />
+
+        <EditText
+            android:id="@+id/txtemail"
+            android:layout_width="326dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Email*"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtcustomername" />
+
+        <EditText
+            android:id="@+id/txtcompanyname"
+            android:layout_width="326dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="24dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Company name"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtemail" />
+
+        <Button
+            android:id="@+id/btncreateinvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="28dp"
+            android:text="Create Invoice"
+            android:textColor="#2980B9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtremark" />
+
+        <Button
+            android:id="@+id/btncancelinvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="28dp"
+            android:text="Cancel"
+            android:textColor="#2980B9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btncreateinvoice"
+            app:layout_constraintTop_toBottomOf="@+id/txtremark" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
