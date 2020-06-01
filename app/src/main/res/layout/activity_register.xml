@@ -64,7 +64,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtemail"
+            android:id="@+id/txtlemail"
             android:layout_width="272dp"
             android:layout_height="34dp"
             android:layout_marginTop="60dp"
@@ -78,10 +78,10 @@
             app:layout_constraintTop_toBottomOf="@+id/txtfullname" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtpassword"
+            android:id="@+id/txtlpassword"
             android:layout_width="272dp"
             android:layout_height="34dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="55dp"
             android:background="#FFFFFF"
             android:hint="Password*"
             android:textColor="#FFFFFF"
@@ -89,13 +89,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.417"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtemail" />
+            app:layout_constraintTop_toBottomOf="@+id/txtlemail" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtconfirmpassword"
             android:layout_width="272dp"
             android:layout_height="34dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="44dp"
             android:background="#FFFFFF"
             android:hint="Confirm Password*"
             android:textColor="#FFFFFF"
@@ -103,7 +103,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.417"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtpassword" />
+            app:layout_constraintTop_toBottomOf="@+id/txtlpassword" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtcompany"

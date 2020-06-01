@@ -42,12 +42,12 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="56dp"
             android:text="Payment Details:"
             android:textColor="#2980B9"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintHorizontal_bias="0.072"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/txttaxamount" />
 
@@ -99,19 +99,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtitemname" />
 
+        //.ui.gallery.GalleryFragment
+
         <EditText
-            android:id="@+id/txttotalamount"
+            android:id="@+id/txtpaymentdate"
             android:layout_width="326dp"
             android:layout_height="35dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="28dp"
             android:background="#2980B9"
             android:ems="10"
-            android:hint="Total Amount"
-            android:inputType="textPersonName"
+            android:hint="Payment date(YYYY/MM/DD)"
+            android:inputType="text"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintHorizontal_bias="0.435"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -119,7 +121,7 @@
             android:id="@+id/txtremark"
             android:layout_width="320dp"
             android:layout_height="117dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="32dp"
             android:background="#2980B9"
             android:ems="10"
             android:gravity="start"
@@ -131,22 +133,62 @@
             app:layout_constraintHorizontal_bias="0.472"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtdiscount" />
-        //.ui.gallery.GalleryFragment
+
+        <Button
+            android:id="@+id/btncreateinvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
+            android:text="Create Invoice"
+            android:textColor="#2980B9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtremark" />
+
+        <Button
+            android:id="@+id/btncancelinvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="24dp"
+            android:text="Cancel"
+            android:textColor="#2980B9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btncreateinvoice"
+            app:layout_constraintTop_toBottomOf="@+id/txtremark" />
+
         <EditText
-            android:id="@+id/txtpaymentdate"
-            android:layout_width="326dp"
+            android:id="@+id/txtdiscount"
+            android:layout_width="141dp"
             android:layout_height="35dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="64dp"
             android:background="#2980B9"
             android:ems="10"
-            android:hint="Payment date(YYYY/MM/DD)"
-            android:inputType="date"
+            android:hint="Discount"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/txtamountpaid"
+            app:layout_constraintHorizontal_bias="0.037"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtpaymentdate" />
+
+        <EditText
+            android:id="@+id/txtamountpaid"
+            android:layout_width="141dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="36dp"
+            android:background="#2980B9"
+            android:ems="10"
+            android:hint="Amount Paid"
+            android:inputType="textPersonName"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txttotalamount" />
+            app:layout_constraintTop_toBottomOf="@+id/txtpaymentdate" />
 
         <EditText
             android:id="@+id/txttaxamount"
@@ -179,38 +221,6 @@
             android:textColorHint="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtdescription" />
-
-        <EditText
-            android:id="@+id/txtdiscount"
-            android:layout_width="141dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="68dp"
-            android:background="#2980B9"
-            android:ems="10"
-            android:hint="Discount"
-            android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/txtamountpaid"
-            app:layout_constraintHorizontal_bias="0.048"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txtpaymentdate" />
-
-        <EditText
-            android:id="@+id/txtamountpaid"
-            android:layout_width="141dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="40dp"
-            android:background="#2980B9"
-            android:ems="10"
-            android:hint="Amount Paid"
-            android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtpaymentdate" />
 
         <EditText
             android:id="@+id/txttotal"
@@ -258,7 +268,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txtdescription" />
 
         <EditText
-            android:id="@+id/txtemail"
+            android:id="@+id/txtlemail"
             android:layout_width="326dp"
             android:layout_height="35dp"
             android:layout_marginTop="20dp"
@@ -287,31 +297,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtemail" />
-
-        <Button
-            android:id="@+id/btncreateinvoice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="28dp"
-            android:text="Create Invoice"
-            android:textColor="#2980B9"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtremark" />
-
-        <Button
-            android:id="@+id/btncancelinvoice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="28dp"
-            android:text="Cancel"
-            android:textColor="#2980B9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/btncreateinvoice"
-            app:layout_constraintTop_toBottomOf="@+id/txtremark" />
+            app:layout_constraintTop_toBottomOf="@+id/txtlemail" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

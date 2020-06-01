@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.navigation.NavigationView;
@@ -17,18 +18,23 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    //Button  txt
+
     //variables
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+   // DBHelper db;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+      //  db = new DBHelper(this);
+
+
+
 
         //---------------------hooks---------------------
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -79,6 +85,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
              case R.id.nav_createinvoice:
                  Intent intent1 = new Intent(MainActivity.this, AddinvoiceActivity.class);
                  startActivity(intent1);
+                 break;
+
+             case R.id.nav_logout:
+                 Intent intent2 = new Intent(MainActivity.this, LoginActivity.class);
+                 startActivity(intent2);
+                 break;
+
+             case R.id.nav_customer:
+                 Intent intent3 = new Intent(MainActivity.this, ShowcustomerActivity.class);
+                 startActivity(intent3);
                  break;
 
 
