@@ -12,8 +12,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,6 +27,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    ListView lv_main;
+    DatabaseHelper databaseHelper;
+    ArrayList<invoicemodel> arrayList;
+    invoiceadaptor INVOICEADAPTER;
+    ArrayList<invoicemodel> newarrayList;
+
    // DBHelper db;
 
 
@@ -41,9 +50,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
 
+        lv_main = findViewById(R.id.listviewmain);
+        databaseHelper = new DatabaseHelper(this);
+        arrayList = new ArrayList<>();
+
 
         //--------------------toolbar--------------------
         setSupportActionBar(toolbar);
+
 
 
         //--------------------navigation drawer menu---------------------
@@ -57,6 +71,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setCheckedItem(R.id.nav_listofinvoice);
 
+        //-----------------------------------------------------------------
+        loadDataInListView();
+
+
+    }
+
+
+    private void loadDataInListView()
+    {
+        arrayList= databaseHelper.getAllData();
+        INVOICEADAPTER = new invoiceadaptor(this,arrayList);
+        lv_main.setAdapter(INVOICEADAPTER);
+        INVOICEADAPTER.notifyDataSetChanged();
+        newarrayList= databaseHelper.getAllData();
+        //INVOICEADAPTER.
 
     }
 
@@ -77,6 +106,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
          switch (menuItem.getItemId()){
 
              case R.id.nav_listofinvoice:
+                 Intent intent6 = new Intent(MainActivity.this, MainActivity.class);
+                 startActivity(intent6);
+
+
                  break;
              case R.id.nav_addcustomer:
                  Intent intent  = new Intent(MainActivity.this, CustomerActivity.class);

@@ -13,65 +13,62 @@ import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    DBHelper db;
-    EditText full_name;
-    EditText email;
-    EditText password;
-    EditText confirm_password;
-    EditText country;
-    EditText company;
-    Button register;
-    TextView tvlogin;
+        TextView backtologin;
+        TextView fullname;
+        TextView email;
+        TextView password;
+        TextView confirmpassword;
+        TextView company;
+        TextView country;
+        Button register;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        db = new DBHelper(this);
-        full_name = (EditText) findViewById(R.id.txtfullname);
-        email = (EditText) findViewById(R.id.txtlemail);
-        password = (EditText) findViewById(R.id.txtlpassword);
-        confirm_password = (EditText) findViewById(R.id.txtconfirmpassword);
-        country = (EditText) findViewById(R.id.txtcountry);
-        company = (EditText) findViewById(R.id.txtcompany);
-        register = (Button) findViewById(R.id.btnlogin);
-        tvlogin = (TextView) findViewById(R.id.txtviewlogin);
-        register.setOnClickListener(new View.OnClickListener() {
+
+        backtologin = findViewById(R.id.txtviewlogin);
+        fullname = findViewById(R.id.txtfullname);
+        email = findViewById(R.id.txtlemail);
+        password = findViewById(R.id.txtlpassword);
+        confirmpassword = findViewById(R.id.txtconfirmpassword);
+        company = findViewById(R.id.txtcompany);
+        country = findViewById(R.id.txtcountry);
+        register = findViewById(R.id.button3);
+
+
+
+
+        backtologin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent loginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(loginIntent);
+            public void onClick(View v) {
+
+
+                Intent backtologinintent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(backtologinintent);
+
             }
+
+
         });
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name = full_name.getText().toString().trim();
-                String user = email.getText().toString().trim();
-                String pwd = password.getText().toString().trim();
-                String cnf_pwd = confirm_password.getText().toString().trim();
-                String cntry = country.getText().toString().trim();
-                String cmpny = company.getText().toString().trim();
+
+      register.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              Intent mainactivity = new Intent(RegisterActivity.this, MainActivity.class);
+              startActivity(mainactivity);
 
 
-                if(pwd.equals(cnf_pwd)){
-                    long val = db.addUser(user,pwd);
-                    if(val > 0){
-                        Toast.makeText(RegisterActivity.this,"You have registered",Toast.LENGTH_SHORT).show();
-                        Intent moveToLogin = new Intent(RegisterActivity.this,LoginActivity.class);
-                        startActivity(moveToLogin);
-                    }
-                    else{
-                        Toast.makeText(RegisterActivity.this,"Registeration Error",Toast.LENGTH_SHORT).show();
-                    }
+              Toast.makeText(RegisterActivity.this, "You have sucessfully registered", Toast.LENGTH_SHORT).show();
+          }
+      });
 
-                }
-                else{
-                    Toast.makeText(RegisterActivity.this,"Password is not matching", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+
+
     }
 }
+
